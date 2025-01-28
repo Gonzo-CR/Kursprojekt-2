@@ -1,4 +1,52 @@
 body {
     background: url("background-image.png");
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    /*place the div in the center of the page*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: black;
+    height: 190px;
+    width: 1000px;
+    border: 10px solid black;
+    border-radius: 2rem;
+    background-color: white;
+}
+
+.start-button {
+    /*place the button in the center of the page*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #333;
+    height: 100px;
+    width: 500px;
+    border: 10px solid black;
+    border-radius: 2rem;
+    background-color: white;
+    margin-top: 6rem;
+    ;
+}
+
+.start-button:hover {
+    background-color: #333;
+    color: white;
+    
 }
