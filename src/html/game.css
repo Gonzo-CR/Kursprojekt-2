@@ -1,34 +1,150 @@
 body {
-    background-color: aqua;
+    background-color: #c9a8df;
     
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
+    position: absolute;
+    top: 0;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+    text-align: center;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Adjust padding as needed */
 }
+
+.header img {
+    width: 60%; /* Ensure the image fits within the header */
+    height: auto;
+}
+
+
 
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height:fit-content;
+    padding-top: 23rem;
 }
 
 .content-grid {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    padding-top: 2rem;
+    height: fit-content;
 }
 
 .meme-grid {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
+    position: relative;
 }
 
+.meme-grid .image {
+    position: relative;
+    display: inline-block;
+}
+
+.meme-grid .image img {
+    width: 100%;
+    height: auto;
+}
+
+.meme-grid .input {
+    display: grid;
+    height: 10rem;
+}
+
+.meme-text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    text-align: center;
+    width: 90%;
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-height: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    pointer-events: none;
+}
+
+input {
+    padding: 10px;
+    font-size: 1.8rem;
+    border: 3px solid black;
+    border-radius: 0 0 1rem 1rem; /* Rounded corners at the bottom */
+}
+
+input:hover {
+    font-size: 2rem;
+    cursor: text;
+}
 .options {
     display: grid;
+    justify-items: center;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 5rem;
+    height: fit-content;
 }
+
+.next {
+    background-color: #BBDDF2;
+        height: 5rem;
+    width: 15rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+}
+
+.next:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.download {
+    background-color: #BBDDF2;
+        height: 5rem;
+    width: 15rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+
+    
+}
+.download:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+
+}
+
+.home {
+    background-color: #BBDDF2;
+    height: 5rem;
+    width: 15rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+}
+
+.home:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+
+}
+
+

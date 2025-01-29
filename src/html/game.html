@@ -7,15 +7,19 @@
     <title>Game Site</title>
 </head>
 <body>
-    <header class="header">Create your Meme!</header>
+    <header class="header">
+        <img src="game-title.png" alt="">
+    </header>
     <div class="main-container">
         <div class="content-grid">
             <div class="meme-grid">
                 <div class="image" >
                     <img src="jimin_meme.jpg" alt="">
+                    <div class="meme-text" id="memeText"></div>
                 </div>
+            
                 <div class="input">
-                    <input type="text" placeholder="Enter your text here">
+                    <input type="text" id="textInput" placeholder="Enter your text here">
                 </div>
             </div>
             <div class="options">
@@ -31,5 +35,15 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('textInput').addEventListener('input', function() {
+            let memeText = document.getElementById('memeText');
+            memeText.textContent = this.value.toUpperCase();
+        });
+
+        html2canvas(document.body).then(function(canvas) {
+        document.body.appendChild(canvas);
+        });
+    </script>
 </body>
 </html>

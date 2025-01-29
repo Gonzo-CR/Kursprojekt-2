@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Impact', sans-serif;
     font-size: 5em;
     color: black;
     height: 190px;
@@ -42,11 +43,17 @@ body {
     border-radius: 2rem;
     background-color: white;
     margin-top: 6rem;
-    ;
+    cursor: pointer;
+    font-family: 'Impact', sans-serif;
+    text-decoration: none;
+}
+
+.start-button a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .start-button:hover {
-    background-color: #333;
     color: white;
-    
+    background-color: #BBDDF2 ;
 }
