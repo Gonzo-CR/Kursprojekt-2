@@ -48,11 +48,14 @@ body {
 .meme-grid .image {
     position: relative;
     display: inline-block;
+
 }
 
 .meme-grid .image img {
-    width: 100%;
-    height: auto;
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    background-color: black;
 }
 
 .meme-grid .input {
@@ -118,12 +121,14 @@ input:hover {
     background-color: #BBDDF2;
         height: 5rem;
     width: 15rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    align-content: center;
     font-size: 2rem;
     border-radius: 1rem;
     border: none;
     color: white;
 
-    
 }
 .download:hover {
     transform: scale(1.2);

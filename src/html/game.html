@@ -13,37 +13,28 @@
     <div class="main-container">
         <div class="content-grid">
             <div class="meme-grid">
-                <div class="image" >
-                    <img src="jimin_meme.jpg" alt="">
+                <div class="image" id="textImage">
+                    <img src="jimin_meme.jpg" alt="" id="meme-image">
                     <div class="meme-text" id="memeText"></div>
                 </div>
-            
                 <div class="input">
                     <input type="text" id="textInput" placeholder="Enter your text here">
                 </div>
             </div>
             <div class="options">
-                <button class="next">
+                <button class="next" id="next-button">
                     NEXT
                 </button>
-                <button class="download">
+                <a class="download" id="download-link" download="meme.png">
                     DOWNLOAD
-                </button>
+                </a>
                 <button class="home">
                     Back to home
                 </button>
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('textInput').addEventListener('input', function() {
-            let memeText = document.getElementById('memeText');
-            memeText.textContent = this.value.toUpperCase();
-        });
-
-        html2canvas(document.body).then(function(canvas) {
-        document.body.appendChild(canvas);
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="javascript.js"></script>
 </body>
 </html>
