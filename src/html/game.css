@@ -20,14 +20,79 @@ body {
     height: auto;
 }
 
+.popup-message {
+    overflow: hidden;
+}
 
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #BBDDF2;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 700px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.content .gif-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.content .gif {
+    width: 90%; /* Adjust the width as needed */
+    height: auto;
+}
+
+.content .text-bubble {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+
+.content .spent-time {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+
+.content .appeal {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+
+.content .close-popup {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.content .close-popup .x-button {
+    width: 1.5rem;
+}
+.popup-message img {
+    width: 60%;
+    
+}
 
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height:fit-content;
-    padding-top: 23rem;
+    padding-top: 19rem;
 }
 
 .content-grid {

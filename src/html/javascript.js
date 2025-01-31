@@ -23,7 +23,14 @@ const images = [
     "JHope3.jpg",
 ];
 
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(playTimer, 2000);
+});
 
+function playTimer() {
+    console.log("play clicked");
+    document.getElementById('popup-message').hidden = false; 
+}
 document.getElementById('textInput').addEventListener('input', function() {
     let memeText = document.getElementById('memeText');
     memeText.textContent = this.value.toUpperCase();
@@ -64,5 +71,4 @@ document.getElementById('download-link').addEventListener('click', function() {
         link.click();
         document.body.removeChild(link);
     });
-
-    });
+});
