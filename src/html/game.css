@@ -9,7 +9,7 @@ body {
     width: 60%;
     left: 50%;
     transform: translate(-50%);
-    z-index: 10;
+    z-index: 1;
     text-align: center;
     margin: 0; /* Remove any default margin */
     padding: 0; /* Adjust padding as needed */
@@ -20,8 +20,16 @@ body {
     height: auto;
 }
 
+.dimming {
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+}
 .popup-message {
-    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
 }
 
 .content {
@@ -34,7 +42,7 @@ body {
     border-radius: 1rem;
     width: 700px;
     height: 500px;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -70,15 +78,6 @@ body {
     left: 15%;
 }
 
-.content .close-popup {
-    background: none;
-    border: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
 .content .close-popup .x-button {
     width: 1.5rem;
 }
@@ -92,7 +91,7 @@ body {
     justify-content: center;
     align-items: center;
     height:fit-content;
-    padding-top: 19rem;
+    padding-top: 13rem;
 }
 
 .content-grid {
@@ -100,8 +99,6 @@ body {
     align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-    padding-top: 2rem;
-    height: fit-content;
 }
 
 .meme-grid {
@@ -113,19 +110,18 @@ body {
 .meme-grid .image {
     position: relative;
     display: inline-block;
-
 }
 
 .meme-grid .image img {
-    width: 500px;
-    height: 500px;
-    object-fit: contain;
+    width: 380px;
+    height: 350px;
+    object-fit: fit-content;
     background-color: black;
 }
 
 .meme-grid .input {
     display: grid;
-    height: 10rem;
+    height: 6rem;
 }
 
 .meme-text {
@@ -150,13 +146,13 @@ body {
 
 input {
     padding: 10px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     border: 3px solid black;
     border-radius: 0 0 1rem 1rem; /* Rounded corners at the bottom */
 }
 
 input:hover {
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: text;
 }
 .options {
@@ -167,54 +163,52 @@ input:hover {
     height: fit-content;
 }
 
-.next {
-    background-color: #BBDDF2;
-        height: 5rem;
-    width: 15rem;
-    font-size: 2rem;
-    border-radius: 1rem;
+.button-group {
+    height: 4rem;
+    width: 10rem;
     border: none;
+    border-radius: 1rem;
     color: white;
+    background-color: #BBDDF2;
+    font-size: larger;
+    font-weight: 700;
 }
 
-.next:hover {
+.button-group:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    background-color: white;
+    color: #BBDDF2;
+}
+
+.close-popup {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.close-popup:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
 
-.download {
-    background-color: #BBDDF2;
-        height: 5rem;
-    width: 15rem;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    align-content: center;
-    font-size: 2rem;
-    border-radius: 1rem;
-    border: none;
-    color: white;
-
+.i-will {
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+    background-color: #EFD5F2;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 2rem;
 }
-.download:hover {
+
+.i-will:hover {
     transform: scale(1.2);
     cursor: pointer;
-
 }
 
-.home {
-    background-color: #BBDDF2;
-    height: 5rem;
-    width: 15rem;
-    font-size: 2rem;
-    border-radius: 1rem;
-    border: none;
+.home-link {
+    text-decoration: none;
     color: white;
 }
-
-.home:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-
-}
-
-

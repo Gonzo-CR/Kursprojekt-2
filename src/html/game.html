@@ -10,27 +10,30 @@
     <header class="header">
         <img src="game-title.png" alt="">
     </header>
-    <div class="popup-message" id="popup-message" visable="false">
+    <div class="popup-message" id="popup-message" hidden="true">
         <div class="content">
             <div class="gif-content">
                 <img src="You have been on this.gif" alt="" class="gif">
-                <div class="text-bubble">
+                <div class="text-bubble" id="top-text-popup">
                     You used this app for:
                 </div>
-                <div class="spent-time">
-                    12
+                <div class="spent-time" id="time-spent">
+                    
                 </div>
                 <div class="appeal">
                     Go touch some grass!
                 </div>
-                <button class="close-popup">
+                <button class="i-will" id="i-will-button">
+                    <a href="index.html" class="home-link">Back to Home</a>        
+                </button>
+                <button class="close-popup" id="close-popup-button">
                     <img src="x-mark.png" alt="" class="x-button">
                 </button>
             </div>
         </div>
     </div>
-    <div class="main-container">
-        <div class="content-grid">
+    <div class="main-container" id="main">
+        <div class="content-grid" id="content-grid">
             <div class="meme-grid">
                 <div class="image" id="textImage">
                     <img src="jimin_meme.jpg" alt="" id="meme-image">
@@ -42,14 +45,14 @@
                 </div>
             </div>
             <div class="options">
-                <button class="next" id="next-button">
+                <button class="button-group next" id="next-button">
                     NEXT
                 </button>
-                <a class="download" id="download-link" download="meme.png">
+                <button class="button-group download" id="download-button" download="meme.png">
                     DOWNLOAD
-                </a>
-                <button class="home">
-                    Back to home
+                </button>
+                <button class="button-group home" id="home-button">
+                    Back to Home
                 </button>
             </div>
         </div>
