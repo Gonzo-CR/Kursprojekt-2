@@ -1,4 +1,6 @@
-
+/**
+ * Array of BTS-Meme-Images
+ */
 const images = [
     "V1.jpg",
     "V2.jpg",
